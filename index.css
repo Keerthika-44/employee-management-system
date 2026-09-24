@@ -1,0 +1,174 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f1f5f9;
+  color: #1e293b;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #1d4ed8;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 35px;
+  color: #334155;
+}
+
+.employee-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-group textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.address-group,
+.submit-btn,
+.success-message,
+.form-error {
+  grid-column: 1 / -1;
+}
+
+.submit-btn {
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.submit-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: #15803d;
+  background: #dcfce7;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.form-error,
+.error-message {
+  color: #b91c1c;
+}
+
+.form-error {
+  background: #fee2e2;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.error-message {
+  font-size: 12px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th {
+  background: #1e40af;
+  color: white;
+  padding: 13px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.employee-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.employee-table tbody tr:hover {
+  background: #eff6ff;
+}
+
+.empty-text {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 12px;
+    padding: 18px;
+  }
+
+  .employee-form {
+    grid-template-columns: 1fr;
+  }
+
+  .address-group,
+  .submit-btn,
+  .success-message,
+  .form-error {
+    grid-column: 1;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
